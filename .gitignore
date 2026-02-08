@@ -17,8 +17,6 @@ ENV/
 *~
 
 # Environment variables
-.env
-.env.local
 .env.*.local
 
 # Build outputs
@@ -44,3 +42,4 @@ frontend/.vite/
 *.db
 *.sqlite
 *.sqlite3
+config.bat

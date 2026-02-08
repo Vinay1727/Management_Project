@@ -4,24 +4,11 @@ from .routes import employees, attendance, notifications
 
 app = FastAPI(title="Management API", version="1.0.0")
 
-# CORS
-origins = [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "http://localhost:5175",
-    "http://localhost:5176",
-    "http://localhost:5177",
-    "http://localhost:5178",
-    "http://localhost:3000",
-    "https://hrm-comapny.vercel.app",
-    "https://hrm-comapny-*.vercel.app",
-    "https://management-project-9c0e.onrender.com",
-]
-
+# CORS - Allow all origins for now (can be restricted later)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=["*"],  # Allow all origins
+    allow_credentials=False,  # Must be False when using wildcard origins
     allow_methods=["*"],
     allow_headers=["*"],
 )
