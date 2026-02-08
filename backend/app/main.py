@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routes import employees, attendance, notifications
 
-app = FastAPI(title="HRMS Lite API", version="1.0.0")
+app = FastAPI(title="Management API", version="1.0.0")
 
 # CORS
 origins = [
@@ -15,6 +15,7 @@ origins = [
     "http://localhost:3000",
     "https://hrm-comapny.vercel.app",
     "https://hrm-comapny-*.vercel.app",
+    "https://management-project-9c0e.onrender.com",
 ]
 
 app.add_middleware(
